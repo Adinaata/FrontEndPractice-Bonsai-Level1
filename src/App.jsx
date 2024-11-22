@@ -1,9 +1,9 @@
-import Nav from "./assets/section/Nav"
+import Nav from "./section/Nav"
 import './App.css'
-import Hero from "./assets/section/Hero"
-import AddOns from "./assets/section/AddOns"
-import Faq from "./assets/section/Faq"
-import Footer from "./assets/section/Footer"
+import Hero from "./section/Hero"
+import AddOns from "./section/AddOns"
+import Faq from "./section/Faq"
+import Footer from "./section/Footer"
 
 function App() {
 

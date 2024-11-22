@@ -1,4 +1,4 @@
-import { product, freeResources, bonsai, templates } from "../../constants"
+import { product, freeResources, bonsai, templates } from "../constants"
 
 const Footer = () => {
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-col text-neutral-500">
-                <h4 className="text-xl font-medium uppercase text-grayBon my-12">Free freeResources</h4>
+                <h4 className="text-xl font-medium uppercase text-grayBon my-12">Free Resources</h4>
                 {freeResources.map((item)=>(
                     <a key={item.label}
                     className="text-neutral-500 mb-2 hover:text-greenBon cursor-pointer"

@@ -1,5 +1,5 @@
-import Toggle from '../../components/Toggle'
-import { workflow, workflowPlus } from '../../constants'
+import Toggle from '../components/Toggle'
+import { workflow, workflowPlus } from '../constants'
 
 const Hero = () => {
   return (
@@ -41,7 +41,7 @@ const Hero = () => {
             h-auto px-14 py-14 hover:scale-105 duration-150 '>
               <h4 className='text-grayBon font-semibold text-2xl'>Workflow</h4>
               <p className='text-2xl py-4 flex text-grayBon justify-start border-b border-greenBon mb-8 '>$ 
-              <span className='text-6xl font-bold px-2'>19</span> 
+              <span className='text-6xl font-bold px-2'>29</span> 
               <span className='flex items-end'>
               /MONTH
               </span>

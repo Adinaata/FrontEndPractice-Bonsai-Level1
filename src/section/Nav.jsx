@@ -1,13 +1,9 @@
-import { useState } from "react";
-import { bonsaiLogo } from "..";
-import { navList } from "../../constants";
+
+import { bonsaiLogo } from '../assets'
+import { navList } from "../constants";
 
 const Nav = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
 
   return (
     <header className=" z-10 w-full">
@@ -19,18 +15,16 @@ const Nav = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden lg:flex flex-1 justify-center items-center gap-8">
+        <div className="flex justify-evenly w-1/3 gap-8">
           {navList.map((list) => (
-            <li key={list.label}>
               <a
-                href={list.href}
-                className="text-md text-slate-600 hover:text-coral-red transition-colors hover:text-greenBon"
+                href={list.href} key={list.label}
+                className="text-md text-grayBon hover:text-coral-red transition-colors hover:text-greenBon text-lg font-normal"
               >
                 {list.label}
               </a>
-            </li>
           ))}
-        </ul>
+        </div>
 
         {/* Desktop Buttons */}
         <div className="hidden lg:flex font-semibold gap-4">
@@ -43,33 +37,6 @@ const Nav = () => {
         </div>
 
       </nav>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="lg:hidden bg-white absolute inset-0 z-10 pt-20">
-          <ul className="flex flex-col items-center gap-6">
-            {navList.map((list) => (
-              <li key={list.label}>
-                <a
-                  href={list.href}
-                  className="text-lg text-slate-600 hover:text-coral-red transition-colors"
-                  onClick={toggleMenu}
-                >
-                  {list.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <div className="flex flex-col items-center gap-4 mt-8">
-            <button className="bg-greenBon border border-greenBon rounded-[5px] py-2 px-6 text-white hover:bg-white hover:text-greenBon transition-colors">
-              Log in
-            </button>
-            <button className="bg-greenBon border border-greenBon rounded-[5px] py-2 px-6 text-white hover:bg-white hover:text-greenBon transition-colors">
-              Try Free
-            </button>
-          </div>
-        </div>
-      )}
     </header>
   );
 };

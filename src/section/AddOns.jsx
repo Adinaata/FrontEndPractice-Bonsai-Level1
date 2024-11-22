@@ -36,7 +36,7 @@ const AddOns = () => {
            
         </div>
 
-        <div className="bg-green-200 px-20 py-32 h-auto rounded-md flex justify-between items-center gap-8">
+        <div className="bg-[#F2FAFE] px-20 py-32 h-auto rounded-md flex justify-between items-center gap-8">
             <div className="mr-2">
                 <h1 className="text-6xl mb-4">It&apos;s <span className="text-greenBon font-medium">your</span> business.</h1>
                 <h1 className="text-6xl">We&apos;re here to help it grow.</h1>
