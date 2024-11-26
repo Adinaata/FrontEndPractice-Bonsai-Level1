@@ -1,18 +1,14 @@
-// import './Toggle.css';
-
-function Toggle (){
-    return (
-        <label className="inline-flex items-center cursor-pointer">
-  <input type="checkbox" value="" className="sr-only peer" />
-  <div className="relative w-11 h-6 bg-gray-200 rounded-full peer-checked:bg-blue-600">
-  <div className="absolute top-[2px] left-[2px] bg-white border border-gray-300 rounded-full h-5 w-5 transition-transform duration-300 peer-checked:translate-x-5"></div>
-
-  </div>
-</label>
-
-
-
-    )
+function Toggle({ onChange }) {
+  return (
+    <label className="relative flex justify-between items-center cursor-pointer">
+      <input
+        type="checkbox"
+        className="absolute left-1/2 -translate-x-1/2 w-full h-full peer appearance-none rounded-md cursor-pointer"
+        onChange={onChange}
+      />
+      <span className="w-11 h-7 flex items-center flex-shrink-0 p-0.5 bg-greenBon rounded-full duration-300 ease-in-out after:w-6 after:h-6 after:bg-white after:rounded-full after:shadow-lg after:duration-300 peer-checked:after:translate-x-4 after:content-[''] after:border after:border-neutral-400 cursor-pointer"></span>
+    </label>
+  );
 }
 
 export default Toggle;
